@@ -35,7 +35,7 @@ public class SoundCloudService {
 
     public static SoundCloudService getInstance() {
         if( instance == null ) {
-            instance = new SoundCloudService("https://api..com");
+            instance = new SoundCloudService("http://api.soundcloud.com");
         }
         return instance;
     }
