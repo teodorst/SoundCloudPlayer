@@ -77,6 +77,7 @@ public class SongActivity extends AppCompatActivity {
                 Intent intent = new Intent(SongActivity.this, MusicService.class);
                 intent.setAction("PLAY_FROM_APP");
                 intent.putExtra("songUrl", currentSong.getStreamableUrl());
+                intent.putExtra("songTitle", currentSong.getTitle());
                 startService(intent);
             }
         });
