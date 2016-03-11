@@ -29,7 +29,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         if (intent != null && intent.getExtras() != null)  {
             player = new MediaPlayer();
             player.setWakeMode(getApplicationContext(), PowerManager.PARTIAL_WAKE_LOCK);
-            //player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            player.setAudioStreamType(AudioManager.USE_DEFAULT_STREAM_TYPE);
             player.setOnPreparedListener(this);
             try {
                 Log.e(TAG, intent.getStringExtra("songUrl"));
