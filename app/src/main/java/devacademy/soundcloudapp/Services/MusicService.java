@@ -89,8 +89,6 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
 
     @Override
     public void onCompletion(MediaPlayer mp) {
-        mp.stop();
-        mp.release();
         mp = null; // ori asta ori ii dau reset.
         stopForeground(true);
     }
