@@ -75,6 +75,7 @@ public class SongActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SongActivity.this, MusicService.class);
+                intent.setAction("PLAY_FROM_APP");
                 intent.putExtra("songUrl", currentSong.getStreamableUrl());
                 startService(intent);
             }
